@@ -10,10 +10,11 @@ jobs:
     steps:
       - uses: manav20052022/cdro_action@0.1
         name: Run CDRO release pipeline
+        kind: build
         with:
           url: http://34.148.237.21/flow
           username: ${{ secrets.CDRO_USERNAME }}
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
           project-name: Default
-          releaseh-name: dummyDoraMetricsRelease
+          release-name: dummyDoraMetricsRelease
           parameters: '{\"param1\":\"val1\",\"param2\":\"val2\"}'
