@@ -8,7 +8,7 @@ on:
 jobs:
   cdro_run:
     steps:
-      - uses: manav20052022/cdro_action@v0.1
+      - uses: manav20052022/cdro_action@0.1
         name: Run CDRO release pipeline
         with:
           url: http://34.148.237.21/flow
