@@ -1,27 +1,24 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
 jobs:
-  build:
+  cdro_run:
     steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
+      - uses: docker://golang:1.20.3-alpine3.17
+        name: Say hello
         shell: sh
         run: |
           echo "hello world"
-      - name: Run CDRO release pipeline
-        uses: zvercodebender/cdro-action@v1
+      - uses: manav20052022/cdro_action@v0.1
+        name: Run CDRO release pipeline
         with:
-          url: https://sda.preview.cb-demos.io/
+          url: http://34.148.237.21/flow
           username: ${{ secrets.CDRO_USERNAME }}
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
-          project-name: MyProject
-          releaseh-name: MyRelease
+          project-name: Default
+          releaseh-name: dummyDoraMetricsRelease
           parameters: '{\"param1\":\"val1\",\"param2\":\"val2\"}'
-
