@@ -8,11 +8,6 @@ on:
 jobs:
   cdro_run:
     steps:
-      - uses: docker://golang:1.20.3-alpine3.17
-        name: Say hello
-        shell: sh
-        run: |
-          echo "hello world"
       - uses: manav20052022/cdro_action@v0.1
         name: Run CDRO release pipeline
         with:
