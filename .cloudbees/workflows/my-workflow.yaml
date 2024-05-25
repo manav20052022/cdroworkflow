@@ -15,3 +15,13 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
+      - name: Run CDRO release pipeline
+        uses: zvercodebender/cdro-action@v1
+        with:
+          url: https://sda.preview.cb-demos.io/
+          username: ${{ secrets.CDRO_USERNAME }}
+          user-token: ${{ secrets.CDRO_USER_TOKEN }}
+          project-name: MyProject
+          releaseh-name: MyRelease
+          parameters: '{\"param1\":\"val1\",\"param2\":\"val2\"}'
+
