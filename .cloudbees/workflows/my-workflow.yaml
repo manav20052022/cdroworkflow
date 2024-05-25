@@ -17,4 +17,3 @@ jobs:
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
           project-name: Default
           release-name: dummyDoraMetricsRelease
-          parameters: '{\"param1\":\"val1\",\"param2\":\"val2\"}'
