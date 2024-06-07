@@ -15,5 +15,5 @@ jobs:
           url: https://sda.preview.cb-demos.io/
           username: ${{ secrets.CDRO_USERNAME }}
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
-          project-name: "mtyagi Demo"
+          project-name: "mtyagi_Demo"
           release-name: "Awesome Release"
