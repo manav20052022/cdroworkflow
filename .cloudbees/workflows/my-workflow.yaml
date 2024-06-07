@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - "**"
+  workflow_dispatch:
 jobs:
   cdro_run:
     steps:
@@ -15,5 +16,5 @@ jobs:
           url: https://sda.preview.cb-demos.io/
           username: ${{ secrets.CDRO_USERNAME }}
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
-          project-name: "mtyagi_Demo"
-          release-name: "Awesome_Release"
+          project-name: mtyagi_Demo
+          release-name: Awesome_Release
