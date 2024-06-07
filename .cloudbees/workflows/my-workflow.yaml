@@ -8,7 +8,7 @@ on:
 jobs:
   cdro_run:
     steps:
-      - uses: manav20052022/cdro_action@0.5
+      - uses: manav20052022/cdro_action@1.0
         name: Run CDRO release pipeline
         kind: build
         with:
