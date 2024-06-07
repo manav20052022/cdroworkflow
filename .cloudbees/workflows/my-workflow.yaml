@@ -16,4 +16,4 @@ jobs:
           username: ${{ secrets.CDRO_USERNAME }}
           user-token: ${{ secrets.CDRO_USER_TOKEN }}
           project-name: "mtyagi_Demo"
-          release-name: "Awesome Release"
+          release-name: "Awesome_Release"
